@@ -56,7 +56,14 @@ namespace EventLog2Rss
                 item.Author = string.IsNullOrEmpty(entry.UserName) ? "N/A" : entry.UserName;
                 item.Description = entry.Message;
 
-#if false
+                string query = entry.Source + " " + entry.Message;
+                if (query.Length > 127)
+                {
+                    query = query.Substring(0, 127);
+                }
+                query = Uri.EscapeUriString(query);
+                item.Link = new Uri("http://www.google.co.jp/search?q=" + query);
+
                 RssCategory EntryType = new RssCategory();
                 EntryType.Domain = "EntryType";
                 EntryType.Name = entry.EntryType.ToString();
@@ -72,6 +79,7 @@ namespace EventLog2Rss
                 Category.Name = entry.Category;
                 item.Categories.Add(Category);
 
+#if false
                 RssCategory InstanceId = new RssCategory();
                 InstanceId.Domain = "InstanceId";
                 InstanceId.Name = entry.InstanceId.ToString();
@@ -89,7 +97,7 @@ namespace EventLog2Rss
             }
             
             /*
-            //RSSオブジェクトに追加
+            //RSSオブジェクトに逆順で追加
             channel.Items.Capacity = itemList.Count;
             for (int i = itemList.Count - 1; i >= 0; i--)
             {
