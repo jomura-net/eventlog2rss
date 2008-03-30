@@ -1,12 +1,5 @@
 using System;
-using System.Data;
 using System.Configuration;
-using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
 using Rss;
 using System.Diagnostics;
 using System.Text;
@@ -34,7 +27,6 @@ namespace EventLog2Rss
             }
 
             //イベントログ用の新規フィード作成
-            RssFeed feed = new RssFeed(Encoding.UTF8);
             RssChannel channel = new RssChannel();
             channel.Title = "EventLog(" + log.Log + ")";
             channel.Description = log.LogDisplayName;
@@ -106,6 +98,7 @@ namespace EventLog2Rss
             */
 
             AddEmptyItemToEmptyChannel(channel);
+            RssFeed feed = new RssFeed(Encoding.UTF8);
             feed.Channels.Add(channel);
             return feed;
         }
