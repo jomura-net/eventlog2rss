@@ -56,6 +56,12 @@ namespace EventLog2Rss
                 query = Uri.EscapeUriString(query);
                 item.Link = new Uri("http://www.google.co.jp/search?q=" + query);
 
+                RssGuid guid = new RssGuid();
+                guid.PermaLink = false;
+                //Ç∆ÇËÇ†Ç¶Ç∏ÅAî≠çséûçèÇglobally unique identifierÇ…ê›íËÇµÇƒÇ›ÇÈ
+                guid.Name = entry.TimeGenerated.ToUniversalTime().ToString("yyyyMMdd_HHmmss.fff");
+                item.Guid = guid;
+
                 RssCategory EntryType = new RssCategory();
                 EntryType.Domain = "EntryType";
                 EntryType.Name = entry.EntryType.ToString();
@@ -71,12 +77,10 @@ namespace EventLog2Rss
                 Category.Name = entry.Category;
                 item.Categories.Add(Category);
 
-#if false
                 RssCategory InstanceId = new RssCategory();
                 InstanceId.Domain = "InstanceId";
                 InstanceId.Name = entry.InstanceId.ToString();
                 item.Categories.Add(InstanceId);
-#endif
 
                 channel.Items.Add(item);
                 //itemList.Add(item);
