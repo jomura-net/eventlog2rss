@@ -36,14 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
     <None Include="favicon.ico" />
@@ -57,8 +52,8 @@
   <ItemGroup>
     <Compile Include="EventLogUtil.cs" />
     <Compile Include="Feed.aspx.cs">
-      <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Feed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Feed.aspx.designer.cs">
       <DependentUpon>Feed.aspx</DependentUpon>
