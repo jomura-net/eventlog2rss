@@ -21,18 +21,18 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_71C6FDADBAC67812C2EC6E111EE60C1A"
-        "OwnerKey" = "8:_DF6D5B58B60B4F12BF50B0F48DB3CAEE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_DF6D5B58B60B4F12BF50B0F48DB3CAEE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_F1506D418BAC4C8264B6CF364F109F07"
+        "OwnerKey" = "8:_DF6D5B58B60B4F12BF50B0F48DB3CAEE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DF6D5B58B60B4F12BF50B0F48DB3CAEE"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_71C6FDADBAC67812C2EC6E111EE60C1A"
+        "OwnerKey" = "8:_F1506D418BAC4C8264B6CF364F109F07"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -148,14 +148,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_71C6FDADBAC67812C2EC6E111EE60C1A"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F1506D418BAC4C8264B6CF364F109F07"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:RSS.NET, Version=0.86.2800.25725, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:RSS.NET, Version=0.86.3011.19130, Culture=neutral, PublicKeyToken=209565501ed2339f, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_71C6FDADBAC67812C2EC6E111EE60C1A"
+                    "_F1506D418BAC4C8264B6CF364F109F07"
                     {
                     "Name" = "8:RSS.NET.dll"
                     "Attributes" = "3:512"
@@ -225,6 +225,24 @@
                     "Property" = "8:_307F42C388F348498229C037647DC1C9"
                         "Folders"
                         {
+                            "{4C6F2762-250E-4E7D-82DC-65B304135C98}:_51D2D7BC0305490DBD13F3D8F0D3A030"
+                            {
+                            "AllowScriptSourceAccess" = "11:FALSE"
+                            "AllowReadAccess" = "11:FALSE"
+                            "AllowWriteAccess" = "11:FALSE"
+                            "AllowDirectoryBrowse" = "11:FALSE"
+                            "LogVisits" = "11:TRUE"
+                            "Index" = "11:TRUE"
+                            "ExecutePermissions" = "3:2"
+                            "Name" = "8:bin"
+                            "AlwaysCreate" = "11:TRUE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_38DE6A5ED0B1453AAED510C71D1C20C5"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                 }
@@ -254,6 +272,7 @@
         "MsiBootstrapper"
         {
         "LangId" = "3:1041"
+        "RequiresElevation" = "11:TRUE"
         }
         "Product"
         {
@@ -739,7 +758,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DF6D5B58B60B4F12BF50B0F48DB3CAEE"
             {
-            "SourcePath" = "8:..\\EventLog2RSS\\obj\\Debug\\EventLog2RSS.dll"
+            "SourcePath" = "8:..\\EventLog2RSS\\obj\\Debug\\EventLog2Rss.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_5D03F21F97804B228511AFEEED454F52"
