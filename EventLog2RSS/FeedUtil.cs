@@ -4,6 +4,7 @@ using Rss;
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
+using System.Web;
 
 namespace EventLog2Rss
 {
@@ -45,7 +46,10 @@ namespace EventLog2Rss
                 item.Title = "[" + entry.EntryType.ToString()
                     + "] " + entry.Source;
                 item.PubDate = entry.TimeGenerated.ToUniversalTime();
-                item.Author = string.IsNullOrEmpty(entry.UserName) ? "N/A" : entry.UserName;
+                if (!string.IsNullOrEmpty(entry.UserName))
+                {
+                    item.Author = entry.UserName;
+                }
                 item.Description = entry.Message;
 
                 string query = entry.Source + " " + entry.Message;
@@ -53,7 +57,9 @@ namespace EventLog2Rss
                 {
                     query = query.Substring(0, 127);
                 }
-                query = Uri.EscapeUriString(query);
+                //query = Uri.EscapeUriString(query); //SecurityCenter%20Windows%20%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%20%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82
+                query = HttpUtility.UrlEncode(query); //SecurityCenter+Windows+%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3+%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc+%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%92%e9%96%8b%e5%a7%8b%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82
+                Debug.WriteLine("query : " + query);
                 item.Link = new Uri("http://www.google.co.jp/search?q=" + query);
 
                 RssGuid guid = new RssGuid();
