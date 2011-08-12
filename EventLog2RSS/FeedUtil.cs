@@ -53,6 +53,7 @@ namespace EventLog2Rss
                 item.Description = entry.Message;
 
                 string query = entry.Source + " " + entry.Message;
+                query = query.Replace('\n', ' ');
                 if (query.Length > 127)
                 {
                     query = query.Substring(0, 127);
