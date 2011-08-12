@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLog2Rss", "EventLog2RSS\EventLog2Rss.csproj", "{5E84FBA5-91A8-43F7-9D5E-D192E7795EB8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EventLog2RSSWebSetup", "EventLog2RSSWebSetup\EventLog2RSSWebSetup.vdproj", "{4E814246-F285-4326-95B9-407B1C51FBEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSS.NET", "RSS.NET\RSS.NET.csproj", "{C42FC014-7E12-4FAF-9BC9-79BF1529440D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E84FBA5-91A8-43F7-9D5E-D192E7795EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E84FBA5-91A8-43F7-9D5E-D192E7795EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E84FBA5-91A8-43F7-9D5E-D192E7795EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E84FBA5-91A8-43F7-9D5E-D192E7795EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E814246-F285-4326-95B9-407B1C51FBEB}.Debug|Any CPU.ActiveCfg = Debug
+		{4E814246-F285-4326-95B9-407B1C51FBEB}.Release|Any CPU.ActiveCfg = Release
+		{4E814246-F285-4326-95B9-407B1C51FBEB}.Release|Any CPU.Build.0 = Release
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C42FC014-7E12-4FAF-9BC9-79BF1529440D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+	EndGlobalSection
+EndGlobal
