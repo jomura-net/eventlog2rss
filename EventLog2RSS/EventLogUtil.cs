@@ -32,17 +32,10 @@ namespace EventLog2Rss
             {
                 return true;
             }
-            EventLogEntryType entryType = (EventLogEntryType)Enum.Parse(typeof(EventLogEntryType), type);
-            switch (entryType)
-            {
-                case EventLogEntryType.Error:
-                    if (entry.EntryType == EventLogEntryType.Warning) return false;
-                    goto case EventLogEntryType.Warning;
-                case EventLogEntryType.Warning:
-                    if (entry.EntryType == EventLogEntryType.Information) return false;
-                    break;
-            }
-            return true;
+            if (0 == entry.EntryType) return false;
+
+            EventLogEntryType visibleEntryType = (EventLogEntryType)Enum.Parse(typeof(EventLogEntryType), type);
+            return visibleEntryType >= entry.EntryType;
         }
     }
 }
