@@ -61,7 +61,7 @@ namespace EventLog2Rss
                 //query = Uri.EscapeUriString(query); //SecurityCenter%20Windows%20%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%20%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82
                 query = HttpUtility.UrlEncode(query); //SecurityCenter+Windows+%e3%82%bb%e3%82%ad%e3%83%a5%e3%83%aa%e3%83%86%e3%82%a3+%e3%82%bb%e3%83%b3%e3%82%bf%e3%83%bc+%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%92%e9%96%8b%e5%a7%8b%e3%81%97%e3%81%be%e3%81%97%e3%81%9f%e3%80%82
                 Debug.WriteLine("query : " + query);
-                item.Link = new Uri("http://www.google.co.jp/search?q=" + query);
+                //item.Link = new Uri("http://www.google.co.jp/search?q=" + query); //2023.11.06 Ç§Ç¥Ç¢ÇÃÇ≈çÌèú
 
                 RssGuid guid = new RssGuid();
                 guid.PermaLink = false;
